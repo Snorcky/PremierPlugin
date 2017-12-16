@@ -1,0 +1,17 @@
+name: MonPlugin
+version: 1.0
+author: Snorcky
+main: fr.snorcky.monplugin.MonPlugin
+commands:
+  test:
+    description: Ceci est une commande de test
+    permission: test.use
+  alert:
+    description: Ceci est un broadcast custom
+    permission: broadcast.use
+  spawn:
+    description: Ceci est une commande pour se teleporter au spawn
+    permission: spawn.use
+  randomtp:
+    description: Ceci est une commande pour se teleporter aleatoirement
+    permisison: randomtp.use
