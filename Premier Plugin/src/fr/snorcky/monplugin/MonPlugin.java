@@ -14,6 +14,10 @@ public class MonPlugin extends JavaPlugin {
 		getCommand("test").setExecutor(new CommandTest());
 		getCommand("alert").setExecutor(new CommandTest());
 		getCommand("spawn").setExecutor(new CommandSpawn());
+		getCommand("soleil").setExecutor(new CommandTest());
+		getCommand("nuit").setExecutor(new CommandTest());
+		getCommand("jour").setExecutor(new CommandTest());
+		getCommand("gm").setExecutor(new CommandTest());
 		getCommand("randomtp").setExecutor(new CommandTprandom());
 		getServer().getPluginManager().registerEvents(new MonPluginListeners(), this);
 	}

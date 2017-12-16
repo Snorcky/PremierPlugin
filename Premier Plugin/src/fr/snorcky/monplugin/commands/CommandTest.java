@@ -1,6 +1,7 @@
 package fr.snorcky.monplugin.commands;
 
 import org.bukkit.Bukkit;
+import org.bukkit.GameMode;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -40,6 +41,60 @@ public class CommandTest implements CommandExecutor {
 				
 				
 				return true;
+			}
+			if(cmd.getName().equalsIgnoreCase("jour")) {
+				
+				player.getWorld().setTime(1000);
+				player.sendMessage("§eVous venez de mettre le jour !");
+				
+				return true;
+			}
+			if(cmd.getName().equalsIgnoreCase("nuit")) {
+				
+				player.getWorld().setTime(13000);
+				player.sendMessage("§eVous venez de mettre la nuit !");
+				
+				return true;
+				
+				
+			}
+			if(cmd.getName().equalsIgnoreCase("soleil")) {
+				
+				player.getWorld().setStorm(false);
+				player.sendMessage("§eVous venez de mettre le soleil sur le serveur !");
+				
+				return true;
+				
+			}
+			
+			if(cmd.getName().equalsIgnoreCase("gm")) {
+				
+				if(args.length == 0) {
+					player.sendMessage("§e/gm <0|1|2|3>");
+					player.sendMessage("§e Survie | Creative | Adventure | Spectator");
+				}
+				if(args.length == 1) {
+					if(args[0].equalsIgnoreCase("0")){
+						player.setGameMode(GameMode.SURVIVAL);
+						player.sendMessage("§eVous êtes passé en mode survie");
+					}
+					if(args[0].equalsIgnoreCase("1")) {
+						player.setGameMode(GameMode.CREATIVE);
+						player.sendMessage("§eVous êtes passé en mode créatif");
+					}
+					if(args[0].equalsIgnoreCase("2")) {
+						player.setGameMode(GameMode.ADVENTURE);
+						player.sendMessage("§eVous êtes passé en mode aventure");
+					}
+					if(args[0].equalsIgnoreCase("3")) {
+						player.setGameMode(GameMode.SPECTATOR);
+						player.sendMessage("§eVous êtes passé en mode spectateur");
+					}
+					
+					
+										
+				}
+				
 			}
 		}
 		

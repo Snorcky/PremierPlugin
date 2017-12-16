@@ -15,3 +15,15 @@ commands:
   randomtp:
     description: Ceci est une commande pour se teleporter aleatoirement
     permisison: randomtp.use
+  jour:
+    description: Permet de mettre le jour dans le monde
+    permission: jour.use
+  nuit:
+    description: Permet de mettre la nuit dans le monde
+    permission: nuit.use
+  soleil:
+    description: Permet de mettre le soleil sur le serveur
+    permission: soleil.use
+  gm:
+    description: Permet de changer de gamemode
+    permission: gm.use
