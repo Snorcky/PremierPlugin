@@ -27,3 +27,6 @@ commands:
   gm:
     description: Permet de changer de gamemode
     permission: gm.use
+  ci:
+    description: Supprimer son inventaire
+    permission: ci.use

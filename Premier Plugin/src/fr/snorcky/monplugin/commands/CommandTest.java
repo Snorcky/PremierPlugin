@@ -96,6 +96,14 @@ public class CommandTest implements CommandExecutor {
 				}
 				
 			}
+			
+			if(cmd.getName().equalsIgnoreCase("ci")) {
+				player.getInventory().clear();
+				player.sendMessage("§eInventaire nettoyé !");
+				
+				
+				return true;
+			}
 		}
 		
 		return false;
