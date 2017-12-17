@@ -7,7 +7,17 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
+import fr.snorcky.monplugin.MonPlugin;
+
 public class CommandTest implements CommandExecutor {
+	
+	//On stock l'instance de la classe principale
+	private MonPlugin main;
+	
+	public CommandTest(MonPlugin monPlugin) {
+		this.main = monPlugin;
+		
+	}
 
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String msg, String[] args) {
@@ -16,7 +26,7 @@ public class CommandTest implements CommandExecutor {
 			Player player = (Player)sender;
 			
 			if(cmd.getName().equalsIgnoreCase("test")) {
-				player.sendMessage("§eBravo tu as réussis §4le test !");
+				player.sendMessage(main.getConfig().getString("messages.test").replaceAll("&", "§"));
 				return true;
 			}
 			if(cmd.getName().equalsIgnoreCase("alert")) {

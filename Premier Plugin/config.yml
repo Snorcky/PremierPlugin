@@ -1,0 +1,15 @@
+messages:
+  test: "&eBravo tu as réussis &4le test !"
+badwords:
+- "merde"
+- "flute"
+- "cheval"
+kits:
+  soldat:
+    id: 5
+    
+  sorcier:
+    id: 20
+    
+  caca:
+    id: 10
